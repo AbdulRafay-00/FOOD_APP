@@ -86,6 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                           Text("Or SignUp With"),
                           Row(
                             children: [
+                          Text("Or SignUp With"),
                               // Icon(Icons.google)
                             ],
                           )

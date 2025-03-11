@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'wide_use_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const LoginPage());
@@ -21,8 +22,11 @@ class _LoginPageState extends State<LoginPage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          
           backgroundColor: const Color.fromARGB(243, 233, 181, 1),
-          title: const Text("LOGIN"),
+          
+          title: const Text("LOGIN PAGE",style: TextStyle(fontSize: 30, color: Colors.black),),
+          toolbarHeight: 70,
           centerTitle: true,
           leading: Icon_Button(() {}, const Icon(Icons.arrow_back_sharp)),
         ),
@@ -40,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
               right: 0, // Ensures it takes the full width
               child: Container(
                 padding: EdgeInsets.only(left: 20, right: 20),
-                height: 700,
+                height: 630,
                 decoration: BoxDecoration(
                color: Colors.white ,
                 borderRadius: BorderRadius.only(
@@ -79,17 +83,41 @@ class _LoginPageState extends State<LoginPage> {
                           Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-
-                      Elevted_Button(text: "Login", VoidCallback: (){},),
                       Column(
                         children: [
-                          Text("Or SignUp With"),
+                      Elevted_Button(text: "Login", VoidCallback: (){},),
+                              SizedBox( height:30),
+                          Text("Or SignUp With",style:TextStyle(fontSize: 16,letterSpacing: 1.5)),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.max,
                             children: [
-                          Text("Or SignUp With"),
                               // Icon(Icons.google)
+                              FaIcon(FontAwesomeIcons.google),
+                              SizedBox( width:13),
+                              FaIcon(FontAwesomeIcons.facebook),
+                              SizedBox( width:13),
+                              FaIcon(FontAwesomeIcons.twitter),
                             ],
-                          )
+                          ),
+                             SizedBox( height:18),
+                             Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+
+                              children:[
+                           Text("Don/'t Have An Account?",style:TextStyle(fontSize: 16,letterSpacing: 1.5)),
+                              GestureDetector(
+                                onTap: () {
+                                  
+                                },
+                            child:Text("Sign Up",style:TextStyle(fontSize: 16,letterSpacing: 1.5,  color: Color.fromARGB(233, 250, 105, 8))),
+                             
+                              )
+                              ]
+
+                             )
+
+
                         ],
                       )
                         ],

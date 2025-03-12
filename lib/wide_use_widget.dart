@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main(){
   runApp(Text_Field());
@@ -101,6 +102,42 @@ class Elevted_Button extends StatelessWidget{
                  , 
                  ); 
 
+  }
+}
+
+
+
+
+
+
+
+// Navigation Bar
+class Navigation_Bar extends StatelessWidget {
+  final icon;
+  String? label="";
+   Navigation_Bar({this.icon, this.label});
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold( bottomNavigationBar: ClipRRect(
+      
+      borderRadius: BorderRadius.only(
+        
+        topLeft: Radius.circular(40),
+        topRight: Radius.circular(40),
+      ),
+       child: BottomNavigationBar(
+
+        iconSize: 30,
+         type: BottomNavigationBarType.fixed, 
+         backgroundColor: Color(0xFFE95322),
+
+         items: [
+           BottomNavigationBarItem(icon: icon, label: label),
+         
+         ],
+       ),
+     ),
+    );
   }
 }
     

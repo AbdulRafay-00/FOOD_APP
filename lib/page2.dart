@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'wide_use_widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-void main() {
-  runApp(const LoginPage());
-}
+import "page3.dart";
+import "page4.dart";
+import "Costimized_Button.dart";
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -85,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                         children: [
                       Column(
                         children: [
-                      Elevted_Button(text: "Login", VoidCallback: (){},),
+                      Elevted_Button(text: "Login", VoidCallback: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => Home_Page()));},),
                               SizedBox( height:30),
                           Text("Or SignUp With",style:TextStyle(fontSize: 16,letterSpacing: 1.5)),
                           Row(
@@ -105,10 +104,10 @@ class _LoginPageState extends State<LoginPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
 
                               children:[
-                           Text("Don/'t Have An Account?",style:TextStyle(fontSize: 16,letterSpacing: 1.5)),
+                           Text("Don't Have An Account?",style:TextStyle(fontSize: 16,letterSpacing: 1.5)),
                               GestureDetector(
                                 onTap: () {
-                                  
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_up_page()));
                                 },
                             child:Text("Sign Up",style:TextStyle(fontSize: 16,letterSpacing: 1.5,  color: Color.fromARGB(233, 250, 105, 8))),
                              

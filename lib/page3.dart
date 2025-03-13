@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import "wide_use_widget.dart";
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import "async.dart";
+import "page2.dart";
+import "page4.dart";
 
-
-void main(){
-  runApp(Sign_up_page());
-
-}
 class Sign_up_page extends StatefulWidget {
   const Sign_up_page({super.key});
 
@@ -47,7 +43,7 @@ class _Sign_up_pageState extends State<Sign_up_page> {
               right: 0, // Ensures it takes the full width
               child: Container(
                 padding: EdgeInsets.only(left: 20, right: 20),
-                height: 630,
+                height: 650,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -147,8 +143,8 @@ class _Sign_up_pageState extends State<Sign_up_page> {
                           Column(
                             children: [
                               Elevted_Button(
-                                text: "Login",
-                                VoidCallback: () {},
+                                text: "Sign Up",
+                                VoidCallback: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Home_Page()));},
                               ),
                               SizedBox(height: 30),
                               Text("Or SignUp With",
@@ -173,7 +169,9 @@ class _Sign_up_pageState extends State<Sign_up_page> {
                                         style: TextStyle(
                                             fontSize: 16, letterSpacing: 1.5)),
                                     GestureDetector(
-                                      onTap: () {},
+                                      onTap: () {
+                                         Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                                      },
                                       child: Text("Login",
                                           style: TextStyle(
                                               fontSize: 16,

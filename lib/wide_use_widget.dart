@@ -15,7 +15,7 @@ class Icon_Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(onPressed: VoidCallback, icon: icon,color: Color(0xFFE95322),);
+    return IconButton(onPressed: VoidCallback, icon: icon,color: Color(0xFFE95322));
   }
 }
 
@@ -88,6 +88,7 @@ class Text_Theme extends StatelessWidget {
 class Elevted_Button extends StatelessWidget{
   String? text;
    final  VoidCallback;
+  
 
   Elevted_Button({required this.text,required this.VoidCallback});
   @override 

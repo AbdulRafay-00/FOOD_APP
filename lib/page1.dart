@@ -3,6 +3,7 @@
 import "package:flutter/material.dart";
 import "splash.dart";
 import "wide_use_widget.dart";
+import "page2.dart";
 void main(){
   runApp(page1());
 }
@@ -34,6 +35,7 @@ class Intro_page extends StatefulWidget {
 }
 
 class _intro_pageState extends State<Intro_page> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,11 +72,7 @@ class _intro_pageState extends State<Intro_page> {
             
             Text("Lorem ipsum dolor sit amet,\n conse ctetur  adipiscing elit,\n sed do eiusmod tempor incididunt ut labore et dolore magna.",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),),
                 SizedBox(height: 30),
-                ElevatedButton(onPressed: (){},
-                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFE95322)
-                 ),
-                 child:Text("NEXT",style: TextStyle(color: Color(0xFFE95322), fontWeight: FontWeight.bold,letterSpacing: 1,fontSize: 35),), ),
+              Elevted_Button(text: "LOGIN", VoidCallback: (){Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));})
 
             ],)
             ),

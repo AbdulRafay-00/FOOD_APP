@@ -15,7 +15,7 @@ class splashState extends State<splash> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer( Duration(seconds: 10), (){
+    Timer( Duration(seconds: 8), (){
 
     Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => Intro_page() ));
     });

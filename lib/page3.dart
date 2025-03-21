@@ -1,3 +1,15 @@
+// ****************** Sign-Up Page ******************
+// This file contains the Sign-up page UI for user registration.
+//
+// Features:
+//  - User enters email, password, phone number, and date of birth.
+//  - "Forgot Password" option available.
+//  - Terms of Use and Privacy Policy agreement section.
+//  - Sign-up button navigates to the Home Page.
+//  - Alternative sign-up options via Google, Facebook, and Twitter.
+//  - Navigation to the Login Page if the user already has an account.
+//  - Bottom navigation bar for easy access to different sections.
+
 import 'package:flutter/material.dart';
 import "wide_use_widget.dart";
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -198,8 +210,7 @@ class _Sign_up_pageState extends State<Sign_up_page> {
             iconSize: 30,
             type: BottomNavigationBarType.fixed, // Ensure all icons are visible
             backgroundColor: Color(0xFFE95322),
-            // selectedItemColor: Colors.white, // Customize selected icon color
-            // unselectedItemColor: Colors.black54, // Customize unselected icon color
+            selectedItemColor: Colors.blue, // Customize selected icon color
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
               BottomNavigationBarItem(icon: Icon(Icons.food_bank), label: ""),

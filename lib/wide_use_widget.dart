@@ -66,7 +66,7 @@ class Text_Field_State extends State<Text_Field>{
 }
 
 
-
+//Text Theme
 class Text_Theme extends StatelessWidget {
   const Text_Theme({super.key});
 
@@ -75,7 +75,7 @@ class Text_Theme extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         textTheme: TextTheme(
-          titleLarge:  TextStyle(fontWeight: FontWeight.bold,letterSpacing: 1,)
+          titleLarge:  TextStyle(fontWeight: FontWeight.bold,letterSpacing: 1 )
         )
       )    );
   }
@@ -84,7 +84,7 @@ class Text_Theme extends StatelessWidget {
 
 
 
-
+// Elevated Button
 class Elevted_Button extends StatelessWidget{
   String? text;
    final  VoidCallback;

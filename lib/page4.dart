@@ -1,7 +1,16 @@
+// ****************** Home Page ******************
+// This file defines the main home screen of the application.
+//
+// Features:
+// - page5.dart as favourits page
+// - Custom App Bar with a search bar, cart, notifications, and profile icons.
+// - use of Stack Widget
+// - use of Nasted Column and Row to achieve the desired UI
+
 import "package:flutter/material.dart";
 import 'wide_use_widget.dart';
 import "Costimized_Button.dart";
-import 'page5.dart';
+import 'page_5.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({super.key});
@@ -166,16 +175,13 @@ class _Home_PageState extends State<Home_Page> {
                 iconSize: 30,
                 type: BottomNavigationBarType.fixed, // Ensure all icons are visible
                 backgroundColor: Color(0xFFE95322),
-                // selectedItemColor: Colors.white, // Customize selected icon color
-                // unselectedItemColor: Colors.black54, // Customize unselected icon color
+                selectedItemColor: Colors.white, // Customize selected icon color
                 items: [
                   BottomNavigationBarItem(icon: Icon_Button1(VoidCallback: (){},icon: Icon(Icons.home)), label: ""), 
                   BottomNavigationBarItem(icon: Icon_Button1(VoidCallback: (){},icon: Icon(Icons.food_bank)), label: ""), 
-                  BottomNavigationBarItem(icon: Icon_Button1(VoidCallback: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => FoodApp()));},icon: Icon(Icons.favorite)), label: ""), 
+                  BottomNavigationBarItem(icon: Icon_Button1(VoidCallback: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => MyWidget()));},icon: Icon(Icons.favorite)), label: ""), 
                   BottomNavigationBarItem(icon: Icon_Button1(VoidCallback: (){},icon: Icon(Icons.content_copy)), label: ""), 
-                  BottomNavigationBarItem(icon: Icon_Button1(VoidCallback: (){},icon: Icon(Icons.headphones)), label: ""),  
-                  // BottomNavigationBarItem(icon: Icon(Icons.food_bank), label: ""),
-              
+                  BottomNavigationBarItem(icon: Icon_Button1(VoidCallback: (){},icon: Icon(Icons.headphones)), label: ""),                
                 ],
               ),
             
